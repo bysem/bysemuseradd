@@ -12,7 +12,8 @@ r = Fore.RED
 w = Fore.WHITE
 cy = Fore.CYAN
 ye = Fore.YELLOW
-colors = [lg, r, w, cy, ye]
+colors = [r]
+
 
 try:
     import requests
@@ -24,16 +25,19 @@ def banner():
     import random
     # fancy logo
     b = [
-    '     ____           _____                  ',              
-    '    / __ )__  __   / ___/___  ____ ___     ', 
-    '   / __  / / / /   \__ \/ _ \/ __ `__ \    ',
-    '  / /_/ / /_/ /   ___/ /  __/ / / / / /    ',
-    ' /_____/\__, /   /____/\___/_/ /_/ /_/     ',
-    '       /____/                               '
+'     ____           _____                  ',
+'    / __ )__  __   / ___/___  ____ ___     ',
+'   / __  / / / /   \__ \/ _ \/ __ `__ \    ',
+'  / /_/ / /_/ /   ___/ /  __/ / / / / /    ',
+' /_____/\__, /   /____/\___/_/ /_/ /_/     ',
+'       /____/                              ',
+                                                                        
+                                                                        
+
     ]
     for char in b:
         print(f'{random.choice(colors)}{char}{n}')
-    #print('=============SON OF GENISYS==============')
+    #print('=============BY SEM==============')
     print(f'   Version: 1.4 | Programlayan: By Sem{n}\n')
 
 def clr():
@@ -64,7 +68,7 @@ while True:
             clr()
             print(f'\n{lg} [*] Yeni Hesaplar günlük dosyasına işlendi\n')
             for number in new_accs:
-                c = TelegramClient(f'sessions/{number}', 3910389 , '86f861352f0ab76a251866059a6adbd6')
+                c = TelegramClient(f'sessions/{number}', 2167318 , 'f809ad6150d8fed69d279ebf1068567c')
                 c.start(number)
                 print(f'{lg}[+] Giriş Başarılı')
                 c.disconnect()
@@ -93,7 +97,7 @@ while True:
                     try:
                         client.send_code_request(phone)
                         #client.sign_in(phone, input('[+] Enter the code: '))
-                        print(f'{lg}[+] {phone} ban bulunamadı{n}')
+                        print(f'{lg}[+] {phone} Ban bulunamadı{n}')
                     except PhoneNumberBannedError:
                         print(r+str(phone) + ' Hesap banlandı!'+n)
                         banned_accs.append(account)
@@ -140,7 +144,6 @@ while True:
         input(f'\nMenüye dönmek için ENTER tuşuna basınız...')
         f.close()
     elif a == 4:
-        # thanks to github.com/th3unkn0n for the snippet below
         print(f'\n{lg}[i] Güncelleme Kontrol Ediliyor...')
         try:
             # https://raw.githubusercontent.com/bysem/bysemuseradd/main/version.txt
@@ -159,7 +162,6 @@ while True:
                 else:
                     os.system('rm add.py')
                     os.system('rm manager.py')
-                #os.system('del scraper.py')
                 os.system('curl -l -O https://raw.githubusercontent.com/bysem/bysemuseradd/main/add.py')
                 os.system('curl -l -O https://raw.githubusercontent.com/bysem/bysemuseradd/main/manager.py')
                 print(f'{lg}[*] Yeni sürüm güncellendi: {version.text}')
