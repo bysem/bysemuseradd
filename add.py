@@ -46,7 +46,7 @@ def banner():
     for char in b:
         print(f'{random.choice(colors)}{char}{rs}')
     #print('=============SON OF GENISYS==============')
-    print(f'{lg}   Version: {w}1.3{lg} | Programlayan: {w}By Sem{rs}\n')
+    print(f'{lg}   Version: {w}1.4{lg} | Programlayan: {w}By Sem{rs}\n')
 
 
 # function to clear screen

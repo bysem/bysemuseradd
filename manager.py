@@ -34,7 +34,7 @@ def banner():
     for char in b:
         print(f'{random.choice(colors)}{char}{n}')
     #print('=============SON OF GENISYS==============')
-    print(f'   Version: 1.3 | Programlayan: By Sem{n}\n')
+    print(f'   Version: 1.4 | Programlayan: By Sem{n}\n')
 
 def clr():
     if os.name == 'nt':
@@ -149,7 +149,7 @@ while True:
             print(f'{r} İnternet bağlantısı bulunamadı')
             print(f'{r} Lütfen internete bağlanın ve tekrar deneyin')
             exit()
-        if float(version.text) > 1.3:
+        if float(version.text) > 1.4:
             prompt = str(input(f'{lg}[~] Güncelleme Bulundu[Version {version.text}]. İndirilsin mi??[y/n]: {r}'))
             if prompt == 'y' or prompt == 'yes' or prompt == 'Y':
                 print(f'{lg}[i] Güncelleme İndiriliyor...')
