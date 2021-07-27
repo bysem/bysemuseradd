@@ -149,7 +149,7 @@ while True:
             print(f'{r} İnternet bağlantısı bulunamadı')
             print(f'{r} Lütfen internete bağlanın ve tekrar deneyin')
             exit()
-        if float(version.text) > 1.1:
+        if float(version.text) > 1.3:
             prompt = str(input(f'{lg}[~] Güncelleme Bulundu[Version {version.text}]. İndirilsin mi??[y/n]: {r}'))
             if prompt == 'y' or prompt == 'yes' or prompt == 'Y':
                 print(f'{lg}[i] Güncelleme İndiriliyor...')
